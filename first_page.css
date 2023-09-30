@@ -18,6 +18,43 @@ body{
     align-items: center;
 }
 
+.page-top{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.page-bottum{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.profile-box{
+    width: 40%;
+    display: flex;
+    margin: 20px;
+    background-color: rgba(46, 48, 56, 0.6) ;
+    border-radius: 15px;
+}
+
+.profile-info{
+    width: 70%;
+}
+
+.profile-img{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-img img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
 .music-box{
     background-color: rgb(172, 188, 202);
     border-radius: 15px;
