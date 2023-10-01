@@ -5,7 +5,7 @@
 }
 
 body{
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(
@@ -26,8 +26,9 @@ body{
 
 .page-bottum{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: center;
+    padding: 20px;
 }
 
 .profile-box{
@@ -179,4 +180,91 @@ body{
     height: 100%;
     width: 100%;
     transition: width 0.1s linear;
+}
+
+.page-nav{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    /* background-color: antiquewhite; */
+    height: 50px;
+    width: 30%;
+    border-radius: 15px 15px 0 0;
+}
+
+.page-btn{
+    width: 30%;
+    border-radius: 15px 15px 0 0;
+    background-color: antiquewhite;
+    border-color: antiquewhite;
+    cursor: pointer;
+    /* border: 0; */
+}
+
+.page-btn.on{
+    border: 0;
+    cursor: default;
+}
+
+.my-link{
+    width: 80%;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    opacity: 0;
+
+}
+
+.my-link.on{
+    height: 800px;
+    background-color: antiquewhite;
+    opacity: 1;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+
+}
+
+.recomend-youtube{
+    position: relative;
+    width: 80%;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    opacity: 0;
+}
+
+.recomend-youtube.on{
+    position: relative;
+    bottom: 40px;
+    height: 800px;
+    background-color: antiquewhite;
+    opacity: 1;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.recomend-video{
+    position: relative;
+    width: 80%;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    opacity: 0;
+}
+
+.recomend-video.on{
+    position: relative;
+    height: 800px;
+    bottom: 80px;
+    background-color: antiquewhite;
+    opacity: 1;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+
 }

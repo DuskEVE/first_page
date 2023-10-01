@@ -10,9 +10,15 @@ const cover = document.querySelector("#cover");
 const volumeBar = document.querySelector(".volume-bar");
 const volume = document.querySelector(".volume");
 const volumeBtn = document.querySelector("#vol");
+const myLinkBtn = document.querySelector("#my-link-btn");
+const recomendYoutubeBtn = document.querySelector("#recomend-youtube-btn");
+const recomendVideoBtn = document.querySelector("#recomend-video-btn");
+const myLink = document.querySelector(".my-link");
+const recomendYoutube = document.querySelector(".recomend-youtube");
+const recomendVideo = document.querySelector(".recomend-video");
 
 const songs = [
-    'EVE online - Below The Asteroids', 'EVE online - But Still We Go On', 'Star Citizen - ArcCorp Theme'
+    'EVE online - Below The Asteroids', 'EVE online - But Still We Go On', 'Star Citizen - ArcCorp Theme', 'Starbase - Hewn from the Stars'
 ];
 let songIndex = 0;
 
@@ -105,7 +111,6 @@ playBtn.addEventListener('click',() => {
     if(isPlaying) pauseSong();
     else playSong();
 });
-
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 music.addEventListener('timeupdate', updateProgress);
@@ -113,3 +118,36 @@ progressBar.addEventListener('click', setProgress);
 music.addEventListener('ended', nextSong);
 volumeBar.addEventListener('click', setVolume);
 volumeBtn.addEventListener('click', muteOrUnmute);
+myLinkBtn.addEventListener('click', () => {
+    const isOn = myLinkBtn.classList.contains('on');
+    if(!isOn){
+        myLinkBtn.classList.add('on');
+        myLink.classList.add('on');
+        recomendYoutubeBtn.classList.remove('on');
+        recomendYoutube.classList.remove('on');
+        recomendVideoBtn.classList.remove('on');
+        recomendVideo.classList.remove('on');
+    }
+});
+recomendYoutubeBtn.addEventListener('click', () => {
+    const isOn = recomendYoutubeBtn.classList.contains('on');
+    if(!isOn){
+        myLinkBtn.classList.remove('on');
+        myLink.classList.remove('on');
+        recomendYoutubeBtn.classList.add('on');
+        recomendYoutube.classList.add('on');
+        recomendVideoBtn.classList.remove('on');
+        recomendVideo.classList.remove('on');
+    }
+});
+recomendVideoBtn.addEventListener('click', () => {
+    const isOn = recomendVideoBtn.classList.contains('on');
+    if(!isOn){
+        myLinkBtn.classList.remove('on');
+        myLink.classList.remove('on');
+        recomendYoutubeBtn.classList.remove('on');
+        recomendYoutube.classList.remove('on');
+        recomendVideoBtn.classList.add('on');
+        recomendVideo.classList.add('on');
+    }
+});
