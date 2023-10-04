@@ -13,9 +13,13 @@ const volumeBtn = document.querySelector("#vol");
 const myLinkBtn = document.querySelector("#my-link-btn");
 const recomendYoutubeBtn = document.querySelector("#recomend-youtube-btn");
 const recomendVideoBtn = document.querySelector("#recomend-video-btn");
-const myLink = document.querySelector(".my-link");
-const recomendYoutube = document.querySelector(".recomend-youtube");
-const recomendVideo = document.querySelector(".recomend-video");
+const myLink = document.querySelectorAll(".my-link");
+const recomendYoutube = document.querySelectorAll(".recomend-youtube");
+const recomendVideo = document.querySelectorAll(".recomend-video");
+const myLinkBox = document.querySelector(".my-link-box");
+const recomendYoutubeBox = document.querySelector(".recomend-youtube-box");
+const recomendVideoBox = document.querySelector(".recomend-video-box");
+
 
 const songs = [
     'EVE online - Below The Asteroids', 'EVE online - But Still We Go On', 'Star Citizen - ArcCorp Theme', 'Starbase - Hewn from the Stars'
@@ -122,32 +126,41 @@ myLinkBtn.addEventListener('click', () => {
     const isOn = myLinkBtn.classList.contains('on');
     if(!isOn){
         myLinkBtn.classList.add('on');
-        myLink.classList.add('on');
+        myLinkBox.classList.add('on');
         recomendYoutubeBtn.classList.remove('on');
-        recomendYoutube.classList.remove('on');
+        recomendYoutubeBox.classList.remove('on');
         recomendVideoBtn.classList.remove('on');
-        recomendVideo.classList.remove('on');
+        recomendVideoBox.classList.remove('on');
+        myLink.forEach(element => element.style.display = 'block');
+        recomendYoutube.forEach(element => element.style.display = 'hide');
+        recomendVideo.forEach(element => element.style.display = 'hide');
     }
 });
 recomendYoutubeBtn.addEventListener('click', () => {
     const isOn = recomendYoutubeBtn.classList.contains('on');
     if(!isOn){
         myLinkBtn.classList.remove('on');
-        myLink.classList.remove('on');
+        myLinkBox.classList.remove('on');
         recomendYoutubeBtn.classList.add('on');
-        recomendYoutube.classList.add('on');
+        recomendYoutubeBox.classList.add('on');
         recomendVideoBtn.classList.remove('on');
-        recomendVideo.classList.remove('on');
+        recomendVideoBox.classList.remove('on');
+        myLink.forEach(element => element.style.display = 'hide');
+        recomendYoutube.forEach(element => element.style.display = 'block');
+        recomendVideo.forEach(element => element.style.display = 'hide');
     }
 });
 recomendVideoBtn.addEventListener('click', () => {
     const isOn = recomendVideoBtn.classList.contains('on');
     if(!isOn){
         myLinkBtn.classList.remove('on');
-        myLink.classList.remove('on');
+        myLinkBox.classList.remove('on');
         recomendYoutubeBtn.classList.remove('on');
-        recomendYoutube.classList.remove('on');
+        recomendYoutubeBox.classList.remove('on');
         recomendVideoBtn.classList.add('on');
-        recomendVideo.classList.add('on');
+        recomendVideoBox.classList.add('on');
+        myLink.forEach(element => element.style.display = 'hide');
+        recomendYoutube.forEach(element => element.style.display = 'hide');
+        recomendVideo.forEach(element => element.style.display = 'block');
     }
 });
