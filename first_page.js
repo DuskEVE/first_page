@@ -19,6 +19,7 @@ const recomendVideo = document.querySelectorAll(".recomend-video");
 const myLinkBox = document.querySelector(".my-link-box");
 const recomendYoutubeBox = document.querySelector(".recomend-youtube-box");
 const recomendVideoBox = document.querySelector(".recomend-video-box");
+const video = document.querySelector(".youtube-video");
 
 
 const songs = [
@@ -131,9 +132,10 @@ myLinkBtn.addEventListener('click', () => {
         recomendYoutubeBox.classList.remove('on');
         recomendVideoBtn.classList.remove('on');
         recomendVideoBox.classList.remove('on');
-        myLink.forEach(element => element.style.display = 'block');
-        recomendYoutube.forEach(element => element.style.display = 'hide');
-        recomendVideo.forEach(element => element.style.display = 'hide');
+        myLink.forEach(element => element.setAttribute('style', 'display = block;'));
+        recomendYoutube.forEach(element => element.setAttribute('style', 'display = hide;'));
+        recomendVideo.forEach(element => element.setAttribute('style', 'display = hide;'));
+        video.setAttribute('style', 'width: 50vw; height: 50vh;');
     }
 });
 recomendYoutubeBtn.addEventListener('click', () => {
@@ -145,9 +147,10 @@ recomendYoutubeBtn.addEventListener('click', () => {
         recomendYoutubeBox.classList.add('on');
         recomendVideoBtn.classList.remove('on');
         recomendVideoBox.classList.remove('on');
-        myLink.forEach(element => element.style.display = 'hide');
-        recomendYoutube.forEach(element => element.style.display = 'block');
-        recomendVideo.forEach(element => element.style.display = 'hide');
+        myLink.forEach(element => element.setAttribute('style', 'display = hide;'));
+        recomendYoutube.forEach(element => element.setAttribute('style', 'display = block;'));
+        recomendVideo.forEach(element => element.setAttribute('style', 'display = hide;'));
+        video.setAttribute('style', 'width: 0; height: 0;');
     }
 });
 recomendVideoBtn.addEventListener('click', () => {
@@ -159,8 +162,9 @@ recomendVideoBtn.addEventListener('click', () => {
         recomendYoutubeBox.classList.remove('on');
         recomendVideoBtn.classList.add('on');
         recomendVideoBox.classList.add('on');
-        myLink.forEach(element => element.style.display = 'hide');
-        recomendYoutube.forEach(element => element.style.display = 'hide');
-        recomendVideo.forEach(element => element.style.display = 'block');
+        myLink.forEach(element => element.setAttribute('style', 'display = hide;'));
+        recomendYoutube.forEach(element => element.setAttribute('style', 'display = hide;'));
+        recomendVideo.forEach(element => element.setAttribute('style', 'display = block;'));
+        video.setAttribute('style', 'width: 0; height: 0;');
     }
 });
