@@ -1,2 +1,2 @@
 # first_page
-my first shity web page for practice
+my first crapy web page for practice

@@ -19,8 +19,8 @@ const recomendVideo = document.querySelectorAll(".recomend-video");
 const myLinkBox = document.querySelector(".my-link-box");
 const recomendYoutubeBox = document.querySelector(".recomend-youtube-box");
 const recomendVideoBox = document.querySelector(".recomend-video-box");
-const video = document.querySelector(".youtube-video");
-
+const video01 = document.querySelector(".video-01");
+const video02 = document.querySelectorAll(".video-02");
 
 const songs = [
     'EVE online - Below The Asteroids', 'EVE online - But Still We Go On', 'Star Citizen - ArcCorp Theme', 'Starbase - Hewn from the Stars'
@@ -135,7 +135,8 @@ myLinkBtn.addEventListener('click', () => {
         myLink.forEach(element => element.setAttribute('style', 'display = block;'));
         recomendYoutube.forEach(element => element.setAttribute('style', 'display = hide;'));
         recomendVideo.forEach(element => element.setAttribute('style', 'display = hide;'));
-        video.setAttribute('style', 'width: 50vw; height: 50vh;');
+        video01.setAttribute('style', 'width: 50vw; height: 50vh;');
+        video02.forEach(element => element.setAttribute('style', 'width: 0; height: 0;'));
     }
 });
 recomendYoutubeBtn.addEventListener('click', () => {
@@ -150,7 +151,8 @@ recomendYoutubeBtn.addEventListener('click', () => {
         myLink.forEach(element => element.setAttribute('style', 'display = hide;'));
         recomendYoutube.forEach(element => element.setAttribute('style', 'display = block;'));
         recomendVideo.forEach(element => element.setAttribute('style', 'display = hide;'));
-        video.setAttribute('style', 'width: 0; height: 0;');
+        video01.setAttribute('style', 'width: 0; height: 0;');
+        video02.forEach(element => element.setAttribute('style', 'width: 50vw; height: 50vh;'));
     }
 });
 recomendVideoBtn.addEventListener('click', () => {
@@ -165,6 +167,7 @@ recomendVideoBtn.addEventListener('click', () => {
         myLink.forEach(element => element.setAttribute('style', 'display = hide;'));
         recomendYoutube.forEach(element => element.setAttribute('style', 'display = hide;'));
         recomendVideo.forEach(element => element.setAttribute('style', 'display = block;'));
-        video.setAttribute('style', 'width: 0; height: 0;');
+        video01.setAttribute('style', 'width: 0; height: 0;');
+        video02.forEach(element => element.setAttribute('style', 'width: 50vw; height: 50vh;'));
     }
 });
