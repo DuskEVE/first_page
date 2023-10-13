@@ -224,13 +224,15 @@ body{
     border-radius: 15px;
     opacity: 0;
     text-align: center;
+    transition-duration: 0.5s;
 }
 
 .my-link-box.on{
     height: 800px;
     background-color: antiquewhite;
     opacity: 1;
-    transition: opacity 0.5s ease-in;
+    /* transition: opacity 0.5s ease-in; */
+    transition-duration: 0.5s;
 }
 
 .recomend-youtube-box{
@@ -245,6 +247,7 @@ body{
     border-radius: 15px;
     opacity: 0;
     text-align: center;
+    transition-duration: 0.5s;
 }
 
 .recomend-youtube-box.on{
@@ -253,7 +256,8 @@ body{
     height: 800px;
     background-color: antiquewhite;
     opacity: 1;
-    transition: opacity 0.5s ease-in;
+    /* transition: opacity 0.5s ease-in; */
+    transition-duration: 0.5s;
 }
 
 .recomend-video-box{
@@ -268,6 +272,7 @@ body{
     border-radius: 15px;
     opacity: 0;
     text-align: center;
+    transition-duration: 0.5s;
 }
 
 .recomend-video-box.on{
@@ -277,8 +282,8 @@ body{
     bottom: 80px;
     background-color: antiquewhite;
     opacity: 1;
-    transition: opacity 0.5s ease-in;
-
+    /* transition: opacity 0.5s ease-in; */
+    transition-duration: 0.5s;
 }
 
 /* .my-link{
